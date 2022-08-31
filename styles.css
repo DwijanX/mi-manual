@@ -1,33 +1,79 @@
-body {background-color: #4E7CDB;}
-
-
-table, th, td {
-    border: 2px solid;
+body {background-color: #1F2739;
 }
+
 h1{
     color: whitesmoke;
 }
-th{
-    color: whitesmoke;
-    border-color: black;
+.Maintable th {
+    font-weight: bold;
+    font-size: 1.3em;
+    text-align: left;
+    color: #185875;
+    background-color: #1F2739;
 }
-td{
-    color: whitesmoke;
-    border-color: black;
+.Maintable td {
+    font-weight: normal;
+    font-size: 1em;
+    -webkit-box-shadow: 0 2px 2px -2px #0E1119;
+    -moz-box-shadow: 0 2px 2px -2px #0E1119;
+    box-shadow: 0 2px 2px -2px #0E1119;
 }
-a{
-    color:whitesmoke    
+.Maintable {
+    text-align: left;
+    overflow: hidden;
+    width: 80%;
+    margin: 0 auto;
+display: table;
+padding: 0 0 8em 0;
 }
-#TableSection
+.Maintable td, .Maintable th {
+    padding-bottom: 2%;
+    padding-top: 2%;
+padding-left:2%;  
+}
+.Maintable tr:nth-child(odd) {
+    background-color: #323C50;
+}
+
+/* Background-color of the even rows */
+.Maintable tr:nth-child(even) {
+    background-color: #2C3446;
+}
+.Maintable td:first-child { color: #FF5936; }
+.Maintable td:nth-child(2) { color: #DADADA; }
+.Maintable td a
 {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 40%;
+    color: #3FACE7;
 }
+
+
 img
 {
     display: block;
     margin-left: auto;
     margin-right: auto;
+}
+footer
+{
+    border-top:2px solid;
+    border-color:#323C50 ;
+    color:whitesmoke;
+    text-align:center;
+    margin-top: 6px;
+}
+footer h3
+{
+    color: #69C3F3; 
+}
+
+header 
+{
+    
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+header h1
+{
+    color: #69C3F3;
 }
