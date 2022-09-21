@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="MainDiv">
+    <header>
+    <h1>CSS Documentation</h1>
+    </header>
+    <main>
+        <section class="HtmlNavigator" id="NavSection2">
+            <nav class="mainNav">
+                <a href="index.html">Home</a>
+                <a href="ElementosHTML.html">Html</a>
+                <a href="CSS.html">CSS</a>
+                <a href="">Paragraph example</a>
+            </nav>
+        </section>
+        <section class="TableSection">
+            <section id="ColorsSection">
+                <div class="searchDiv">
+                    <input type="text" id="ColorsInput"  placeholder="Buscar">
+                    <div class="focusSearchInput"></div>
+                </div>
+                
+                <table class="Maintable" id="ColorsTable">
+                    <thead>
+                        <caption>Colores en CSS</caption>
+                        <tr>
+                            <th>Modelo</th>
+                            <th>Descripcion</th>
+                            <th>Sintaxis</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class='clickableRow' data-href='https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/rgb'>
+                            <td>RGB</td>
+                            <td>Se estabece un color en base a las intensidades de los colores primarios. Tambien se admite un parametro adicional que es la transparencia</td>
+                            <td>rgb(red,green,blue,opacity) e.j rgb(112,60,143,0.2) </td>
+                        </tr>
+                        <tr class='clickableRow' data-href='https://developer.mozilla.org/en-US/docs/Web/CSS/hex-color'>
+                            <td>Valor Hexadecimal</td>
+                            <td>Es un valor de 6 digitos donde el primero indica el valor del rojo, el segundo del verde y el ultimo del azul</td>
+                            <td>e.j #703c8f</td>
+                        </tr >
+                        <tr class='clickableRow' data-href='https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/hsl'>
+                            <td>HSL</td>
+                            <td>El modelo admite 3 parametros hue(<dfn>Tono</dfn>,[0-360]),saturation (<dfn>Saturacion</dfn>,[0-100]%) lightness(<dfn>luminosidad</dfn>,[0-100]%) en este modelo tambien es posible agregar el parametro opacidad</td>
+                            <td>HSL(278,41%,40%,0.2)</td>
+                        </tr>
+                    </tbody>
+                    </table>  
+                </section>
+            <section id="selectorsSection">
+                <div class="searchDiv">
+                    <input type="text" id="SelectorsInput"  placeholder="Buscar">
+                    <div class="focusSearchInput"></div>
+                </div>
+                <table class="Maintable" id="SelectorsTable">
+                    <thead>
+                        <caption>Selectores en CSS</caption>
+                        <tr>
+                            <th>Selector</th>
+                            <th>Descripcion</th>
+                            <th>Ejemplo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class='clickableRow' data-href='https://developer.mozilla.org/en-US/docs/Web/CSS/Universal_selectors'>
+                            <td>Selector Universal</td>
+                            <td>Se usa el * para seleccionar todos los elementos y aplicar el estilo</td>
+                            <td>*{color:red;}</td>
+                        </tr>
+                        <tr class='clickableRow' data-href='https://developer.mozilla.org/en-US/docs/Web/CSS/Type_selectors'>
+                            <td>Selector de tipo</td>
+                            <td>Se usa la etiqueta del elemento y se aplica el estilo a dicho elemento</td>
+                            <td>p{color:green;}</td>
+                        </tr>
+                        <tr class='clickableRow' data-href='https://developer.mozilla.org/en-US/docs/Web/CSS/Class_selectors'>
+                            <td>Selector de clase</td>
+                            <td>Se selecciona los elementos en base a su atributo class y se les aplica los elementos</td>
+                            <td>.clase1{color:blue;}</td>
+                        </tr>
+                        <tr class='clickableRow' data-href='https://developer.mozilla.org/en-US/docs/Web/CSS/ID_selectors'>
+                            <td>Selector de ID</td>
+                            <td>Se selecciona los elementos en base a su atributo id y se les aplica los elementos</td>
+                            <td>#ID1{color:blue;}</td>
+                        </tr>
+                        <tr class='clickableRow' data-href='https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors'>
+                            <td rowspan="6">Selector de atributos</td>
+                            <td>Se selecciona los elementos que tengan un atributo dado</td>
+                            <td>td[att]{color:red;}</td>
+                        </tr>
+                        <tr class='clickableRow' data-href='https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors'>
+                            <td id="whiteTextInTable">Se selecciona los elementos que el atributo seleccionado sea igual a un valor</td>
+                            <td id="whiteTextInTable">td[att=value]{color:red;}</td>
+                        </tr>
+                        <tr class='clickableRow' data-href='https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors'>
+                            <td id="whiteTextInTable">Se selecciona los elementos que el atributo seleccionado contenga un valor dado</td>
+                            <td id="whiteTextInTable">td[att ~=value]{color:red;}</td>
+                        </tr>
+                        <tr class='clickableRow' data-href='https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors'>
+                            <td id="whiteTextInTable">Se selecciona los elementos que el atributo seleccionado donde el primer dato del atributo sea el valor dado</td>
+                            <td id="whiteTextInTable">td[att ^=value]{color:red;}</td>
+                        </tr>
+                        <tr class='clickableRow' data-href='https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors'>
+                            <td id="whiteTextInTable">Se selecciona los elementos que el atributo seleccionado donde el ultimo dato del atributo sea el valor dado</td>
+                            <td id="whiteTextInTable">td[att $=value]{color:red;}</td>
+                        </tr>
+                        <tr class='clickableRow' data-href='https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors'>
+                            <td id="whiteTextInTable">Se selecciona los elementos que el atributo seleccionado donde alguno de los datos del atributo sea el valor dado</td>
+                            <td id="whiteTextInTable">td[att *=value]{color:red;}</td>
+                        </tr>
+                        <tr class='clickableRow' data-href='https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes'>
+                            <td>Selector de pseudo clases</td>
+                            <td>Permite seleccionar elementos en base a su estado como ser posicion o interaccion</td>
+                            <td>button:hover{...};
+                                button:disabled{...};
+                            </td>
+                        </tr>
+                        <tr class='clickableRow' data-href='https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements'>
+                            <td>Selector de pseudo elementos</td>
+                            <td>Permite seleccionar partes de un elemento para aplicar un estilo</td>
+                            <td>p::first-line{...}</td>
+                        </tr>
+                        <tr class='clickableRow' data-href='https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors#selector_lists'>
+                            <td>Union de selectores</td>
+                            <td>Realiza varias selecciones a las que se les aplicara un solo estilo</td>
+                            <td>Sel1,Sel2{...}</td>
+                        </tr>
+                        <tr class='clickableRow' data-href='https://developer.mozilla.org/en-US/docs/Web/CSS/Descendant_combinator'>
+                            <td>Seleccion de elementos descendientes</td>
+                            <td>Se aplica el estilo a elementos descendientes de otros (no necesariamente hijos)</td>
+                            <td>Abuelo nieto{...}</td>
+                        </tr>
+                        <tr class='clickableRow' data-href='https://developer.mozilla.org/en-US/docs/Web/CSS/Child_combinator'>
+                            <td>Seleccion de elementos hijos</td>
+                            <td>Se aplica el estilo a elementos hijos de otros</td>
+                            <td>Padre>hijo{...}</td>
+                        </tr>
+                        <tr class='clickableRow' data-href='https://developer.mozilla.org/en-US/docs/Web/CSS/General_sibling_combinator'>
+                            <td>Seleccion de elementos hermanos</td>
+                            <td>Se aplica el estilo a elementos que son hermanos</td>
+                            <td>hermano1~hermano2{...}</td>
+                        </tr>
+                        <tr class='clickableRow' data-href='https://developer.mozilla.org/en-US/docs/Web/CSS/Adjacent_sibling_combinator'>
+                            <td>Seleccion de elementos hermanos adyacentes</td>
+                            <td>Se aplica el estilo a elementos que son hermanos y estan inmediatamente despues</td>
+                            <td>hermano1+hermano2{...}</td>
+                        </tr>
+                    </tbody>
+                    </table>
+                </section>
+                
+                <section id="UnitsSection" >
+                    <div class="searchDiv">
+                        <input type="text" id="UnitsInput"  placeholder="Buscar">
+                        <div class="focusSearchInput"></div>
+                    </div>
+                    <table class="Maintable" id="UnitsTable">
+                        <thead>
+                            <caption>Longitudes en CSS</caption>
+                            <tr>
+                                <th>Unidad</th>
+                                <th>Nombre</th>
+                                <th>Tipo</th>
+                                <th>Equivalencia</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class='clickableRow' data-href='https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Values_and_units#lengths'>
+                                <td>px</td>
+                                <td id="whiteTextInTable">Pixel</td>
+                                <td id="whiteTextInTable">Absoluto</td>
+                                <td id="whiteTextInTable">0.265 mm</td>
+                            </tr>
+                            <tr class='clickableRow' data-href='https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Values_and_units#lengths'>
+                                <td>rem</td>
+                                <td id="whiteTextInTable">Varia en base al tamaño de la letra</td>
+                                <td id="whiteTextInTable">Relativo</td>
+                                <td id="whiteTextInTable">Variable</td>
+                            </tr>
+                            <tr class='clickableRow' data-href='https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Values_and_units#lengths'>
+                                <td>%</td>
+                                <td id="whiteTextInTable">Relativo al font size o width del elemento padre</td>
+                                <td id="whiteTextInTable">Relativo</td>
+                                <td id="whiteTextInTable">Variable</td>
+                            </tr>
+                            <tr class='clickableRow' data-href='https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Values_and_units#lengths'>
+                                <td>vw</td>
+                                <td id="whiteTextInTable">Viewport width, varia en base al ancho de la pantalla</td>
+                                <td id="whiteTextInTable">Relativo</td>
+                                <td id="whiteTextInTable">Variable</td>
+                            </tr>
+                            <tr class='clickableRow' data-href='https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Values_and_units#lengths'>
+                                <td>vh</td>
+                                <td id="whiteTextInTable">Viewport height, varia en base al alto de la pantalla</td>
+                                <td id="whiteTextInTable">Relativo</td>
+                                <td id="whiteTextInTable">Variable</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </section>
+                <section id="OverlaysSection">
+                    <div class="overlay" id="specificityOverlay">
+                        <div>
+                            <div id="buttonContainerOverlay">
+                                <button class="CloseOverlayButton">Close</button>
+                            </div>
+                            <h1>Especificidad</h1>
+                            <div class="textDiv">
+                                <p>La Especificidad es lo que permite determinar que estilo se va aplicar a un elemento, ya que pueden haber varios selectores para un mismo elemento.</p>
+                                <p>La regla consiste en que hay tres niveles para determinar el que gana la especificidad, el id, la clase y el elemento</p>
+                                <p>Si un primer selector tiene mas especificidad en el campo de id da igual que el segundo tenga mas especifidad en los otros dos campos, el primero ya gano la especificidad</p>
+                           </div>
+                            <div class="imageContainer">
+                            <img src="./Assets/Especificidad.PNG" alt="SpecificityExample">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="overlay" id="LineStyleOverlay">
+                        <div>
+                            <div id="buttonContainerOverlay">
+                                <button class="CloseOverlayButton">Close</button>
+                            </div>
+                            <h1>Estilos en linea</h1>
+                            <div class="textDiv">
+                                <p>Los estilos en linea son declaraciones css usando el atributo style de un elemento HTML, este tiene prioridad sobre todas las otras declaraciones y no toma en cuenta la especifidad</p>
+                            </div>
+                            <div class="imageContainer">
+                            <img src="./Assets/EstilosLinea.png" alt="SpecificityExample">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="overlay" id="TopicImportantOverlay">
+                        <div>
+                            <div id="buttonContainerOverlay">
+                                <button class="CloseOverlayButton">Close</button>
+                            </div>
+                            <h1>!Important</h1>
+                            <div class="textDiv">
+                                <p>El uso de !important sirve para darle prioridad a ciertas declaraciones de CSS, estas van por encima de los estilos aplicados usando el atributo style</p>
+                            </div>
+                            <div class="imageContainer">
+                            <img src="./Assets/ImportantImg.png" alt="SpecificityExample">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="overlay" id="OrderOverlay">
+                        <div>
+                            <div id="buttonContainerOverlay">
+                                <button class="CloseOverlayButton">Close</button>
+                            </div>
+                            <h1>Orden</h1>
+                            <div class="textDiv">
+                                <p>Cuando tenemos varios selectores que tienen la misma espeficidad el selector que este al ultimo sera el que tenga la prioridad</p>
+                            </div>
+                            <div class="imageContainer">
+                            <img src="./Assets/Orden.PNG" alt="SpecificityExample">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="overlay" id="InheritanceOverlay">
+                        <div>
+                            <div id="buttonContainerOverlay">
+                                <button class="CloseOverlayButton">Close</button>
+                            </div>
+                            <h1>Herencia</h1>
+                            <div class="textDiv">
+                                <p>Algunos de los elementos CSS heredan las propiedades de sus padres pero otros no, entonces para indicar que una propiedad se debe heredar del padre se usa la sentencia "inherit"</p>
+                                <p>Si se quisiera romper la herencia se usa la sentencia "initial"</p>
+                            </div>
+                            <div class="imageContainer">
+                            <img src="./Assets/css-inheritance.jpg" alt="SpecificityExample">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                </section>
+                <section id="theoricSection">
+                    <h1>Aspectos teoricos</h1>
+                    <button class="TheoricButton" OverlayId="specificityOverlay">Especifidad</button>
+                    <button class="TheoricButton" OverlayId="LineStyleOverlay">Estilos en linea</button>
+                    <button class="TheoricButton" OverlayId="TopicImportantOverlay">!important</button>
+                    <button class="TheoricButton" OverlayId="OrderOverlay">Orden</button>
+                    <button class="TheoricButton" OverlayId="InheritanceOverlay">Herencia</button>
+                </section>
+        </main>
+        <footer>
+            <h3>Nombre: Christian Rivero Arnez</h3>
+        </footer>
+    </div>
+    <script type="module" src="./Src/Csspresenter.js"></script>
+</body>
+</html>

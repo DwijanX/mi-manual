@@ -1,24 +1,42 @@
-body {background-color: #1F2739;
+*{
+    font-family: "Basier circle",-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+}
+:root {
+    --MainBackColor: #1F2739;
+    --secondaryColor: #69C3F3;
+    --TertiaryColor:#185875;
+    --redcolor:#FF5936;
+    --whitecolor:#DADADA;
+  }
+body {background-color: var(--MainBackColor);
+    display: flexbox;
 }
 
-h1{
-    color: whitesmoke;
+table caption{
+    color: #69C3F3;
+    font-size: 2rem;
 }
-.Maintable th {
+table th {
+    
+    font-family: inherit;
     font-weight: bold;
     font-size: 1.3em;
     text-align: left;
-    color: #185875;
-    background-color: #1F2739;
+    color: var(--TertiaryColor);
+    background-color: var(--MainBackColor);
 }
-.Maintable td {
+table td {
+    font-family: inherit;
     font-weight: normal;
     font-size: 1em;
     -webkit-box-shadow: 0 2px 2px -2px #0E1119;
     -moz-box-shadow: 0 2px 2px -2px #0E1119;
     box-shadow: 0 2px 2px -2px #0E1119;
+    padding-right: 0.9rem;
 }
-.Maintable {
+
+
+table {
     text-align: left;
     overflow: hidden;
     width: 80%;
@@ -26,22 +44,36 @@ h1{
 display: table;
 padding: 0 0 8em 0;
 }
-.Maintable td, .Maintable th {
+table td, table th {
+    
+    font-family: inherit;
     padding-bottom: 2%;
     padding-top: 2%;
 padding-left:2%;  
 }
-.Maintable tr:nth-child(odd) {
+
+table tr:nth-child(odd) {
     background-color: #323C50;
 }
-
-/* Background-color of the even rows */
-.Maintable tr:nth-child(even) {
+table tr:nth-child(even) {
     background-color: #2C3446;
 }
-.Maintable td:first-child { color: #FF5936; }
-.Maintable td:nth-child(2) { color: #DADADA; }
-.Maintable td a
+table tr:nth-child(odd):hover,table tr:nth-child(even):hover {
+    background-color: rgba(166, 175, 195, 0.25);
+    transition: 0.3s all ease;
+}
+
+
+table td:first-child { 
+    color: var(--redcolor);
+ }
+table td:nth-child(2) { color: var(--whitecolor); }
+#ColorsTable td:nth-child(3) { color: var(--whitecolor); }
+#SelectorsTable td:nth-child(3) { color: var(--whitecolor); }
+
+#whiteTextInTable{color: var(--whitecolor);}
+
+table td a
 {
     color: #3FACE7;
 }
@@ -57,7 +89,7 @@ footer
 {
     border-top:2px solid;
     border-color:#323C50 ;
-    color:whitesmoke;
+    color:var(--whitecolor);
     text-align:center;
     margin-top: 6px;
 }
@@ -73,7 +105,204 @@ header
     margin-left: auto;
     margin-right: auto;
 }
-header h1
+header h1,#theoricSection h1
 {
-    color: #69C3F3;
+    color: var(--secondaryColor);
+}
+
+
+
+
+
+
+    /*Buttoncontainer*/
+.PageNav
+{
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#EspecificidadSection{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+/*Inputs*/
+.searchDiv
+{
+    margin: 1rem 0;
+    display: inline-block;
+    position: relative;
+    
+    width: 30%;
+    right: 25%;
+}
+.searchDiv input{
+    
+    color: var(--whitecolor);
+    width: inherit;
+    padding: 0.375rem 0.75rem;
+    border:none;
+    outline: none;
+    border-bottom: 2px solid var(--TertiaryColor);
+    text-align: center;
+    background-color:var(--MainBackColor) ;
+}
+.searchDiv input:focus{
+    width: 90%;
+    border-bottom: 2px solid var(--TertiaryColor);
+    transition: 0.4s all ease;
+}
+.searchDiv input:focus+.focusSearchInput{
+    
+    width: 100%;
+}
+.searchDiv .focusSearchInput{
+    position: absolute;
+    bottom: 0;   
+    left:50%;
+    width:0;
+    height: 2px;
+    background-color: var(--secondaryColor);
+    transform: translate(-50%);
+    transition: 0.5s all ease;
+}
+.TableSection
+{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+/*Navigator */
+.HtmlNavigator{
+    display: flex;
+    flex-direction: row-reverse;
+    padding-right: 1rem;
+
+}
+.mainNav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+    background-color: #3FACE7;
+    border-radius: 8px;
+    width: 20rem;
+    min-width: 50%;
+    max-width: 75%;
+}
+.mainNav a{
+    line-height: 50px;
+    height: 100%;
+    width: 25%;
+    font-size: 100%;
+    font-size: 15px;
+    text-align: center;
+    line-height: 2rem;
+    text-decoration:none;
+    padding: 0 1rem;
+    color:white;
+    text-transform: uppercase;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 8px;
+}
+.mainNav a:hover{
+    background-color: var(--redcolor);
+    transition: all 0.3s ease-in;
+}
+/*OVERLAY*/
+
+.overlay{
+    position: fixed; 
+    display: none; 
+    align-items: center;
+    justify-content: center;
+    width: 100%; 
+    height: 100%; 
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5); 
+}
+.overlay>div{
+    display: inherit;
+    flex-direction:column;
+    align-items: center;
+    background-color: var(--MainBackColor);
+    width: 60%;
+    height: 85%;
+    
+}
+.overlay div h1{
+    font-size: 2rem;
+    color:var(--secondaryColor)
+}
+.overlay div p{
+    color: var(--whitecolor);
+    margin: 0.5rem 1rem;
+    text-justify: inter-word;
+}
+.textDiv
+{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-justify: inter-word;
+    text-align: justify;
+}
+.imageContainer
+{
+    display: flex;
+    height: 40%;
+    width: 85%;
+}
+.imageContainer img{
+    margin-top: 1rem;
+    height: 100%;
+    width: 100%;
+}
+
+.overlay #buttonContainerOverlay{
+    width: 100%;
+    height: 5%;
+    display: flex;
+    flex-direction: row-reverse;
+}
+#buttonContainerOverlay button
+{
+    width: 15%;
+    background-color: var(--TertiaryColor);
+    color: var(--whitecolor);
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 00.5rem;
+}
+#buttonContainerOverlay button:hover,#TheoricSection button:hover{
+    background-color: var(--redcolor);
+}
+#theoricSection{
+    height: 5rem;
+    text-align: center;
+    padding-bottom: 2rem;
+    justify-content: center;
+}
+#theoricSection button{
+    padding-left: 1rem;
+    height: 75%;
+    width: 19%;
+    font-size: 90%;
+    background-color: var(--TertiaryColor);
+    color: var(--whitecolor);
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 00.5rem;
+}
+#theoricSection button:hover{
+    background-color: var(--redcolor);
 }
