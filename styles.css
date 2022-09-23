@@ -105,9 +105,13 @@ header
     margin-left: auto;
     margin-right: auto;
 }
-header h1,#theoricSection h1
+header h1,#theoricSection h1,#FlexboxExampleSection h1
 {
     color: var(--secondaryColor);
+}
+#theoricSection h1,#FlexboxExampleSection h1
+{
+    font-size: 2rem;
 }
 
 
@@ -236,6 +240,8 @@ header h1,#theoricSection h1
     width: 60%;
     height: 85%;
     
+    overflow-y: scroll;
+    
 }
 .overlay div h1{
     font-size: 2rem;
@@ -269,6 +275,7 @@ header h1,#theoricSection h1
 .overlay #buttonContainerOverlay{
     width: 100%;
     height: 5%;
+    min-height: 2.5rem;
     display: flex;
     flex-direction: row-reverse;
 }
@@ -286,15 +293,21 @@ header h1,#theoricSection h1
     background-color: var(--redcolor);
 }
 #theoricSection{
-    height: 5rem;
-    text-align: center;
-    padding-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
 }
+#theoricSection div{
+    text-align: center;
+}
+
 #theoricSection button{
     padding-left: 1rem;
-    height: 75%;
-    width: 19%;
+    margin-top:  1rem;
+    height: 6rem;
+    width: 20rem;
     font-size: 90%;
     background-color: var(--TertiaryColor);
     color: var(--whitecolor);
@@ -305,4 +318,73 @@ header h1,#theoricSection h1
 }
 #theoricSection button:hover{
     background-color: var(--redcolor);
+}
+
+.textDiv dl{
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+dl dt{
+    font-weight: bold;
+}
+dl dt, dl dd
+{
+    color: var(--whitecolor);
+    
+}
+#displayTable th{
+    font-size: 1.1rem;
+    width: 9%;
+}
+#displayTable td{
+    width: 9%;
+}
+.textDiv h2{
+    color: var(--secondaryColor);
+    text-align: center;
+}
+#FlexBoxBasicOverlay ul{
+    color: var(--whitecolor);
+    margin-left: 2rem;
+}
+
+#FlexboxExampleSection{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#ObjectsContainerFlexExample
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+
+    background-color: var(--secondaryColor);
+
+    width: 50%;
+    min-height: 20rem;
+    min-width: 20rem;
+    border: 2px black solid;
+    border-radius: 5%;
+}
+#ObjectsContainerFlexExample div{
+    border-radius: 5%;
+    height: 5rem;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px black solid;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+#flexCssCode{
+    margin-top: 1rem;
+    width:24rem;
+    height: 12rem;
+    background-color: var(--TertiaryColor);
+    color: var(--whitecolor);
+    font-size: 1rem;
 }

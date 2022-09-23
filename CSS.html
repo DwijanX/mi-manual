@@ -207,6 +207,105 @@
                     </table>
 
                 </section>
+                <section id="displaySection" >
+                    <div class="searchDiv">
+                        <input type="text" id="displaySectInput"  placeholder="Buscar">
+                        <div class="focusSearchInput"></div>
+                    </div>
+                    <table class="Maintable" id="displayTable">
+                        <thead>
+                            <caption>Propiedades de display</caption>
+                            <tr>
+                                <th>Propiedad</th>
+                                <th>Block</th>
+                                <th>Inline</th>
+                                <th>Inline-Block</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr >
+                                <td>Ocupan todo el espacio</td>
+                                <td id="whiteTextInTable">Si</td>
+                                <td id="whiteTextInTable">No</td>
+                                <td id="whiteTextInTable">No</td>
+                            </tr>
+                            <tr>
+                                <td>Nueva Linea</td>
+                                <td id="whiteTextInTable">Si</td>
+                                <td id="whiteTextInTable">No</td>
+                                <td id="whiteTextInTable">No</td>
+                            </tr><tr >
+                                <td>Padding Horizontal</td>
+                                <td id="whiteTextInTable">Si</td>
+                                <td id="whiteTextInTable">Si</td>
+                                <td id="whiteTextInTable">Si</td>
+                            </tr>
+                            <tr >
+                                <td>Padding Vertical</td>
+                                <td id="whiteTextInTable">Si</td>
+                                <td id="whiteTextInTable">No</td>
+                                <td id="whiteTextInTable">Si</td>
+                            </tr>
+                            <tr >
+                                <td>Margin Horizontal</td>
+                                <td id="whiteTextInTable">Si</td>
+                                <td id="whiteTextInTable">Si</td>
+                                <td id="whiteTextInTable">Si</td>
+                            </tr>
+                            <tr >
+                                <td>Margin Vertical</td>
+                                <td id="whiteTextInTable">Si</td>
+                                <td id="whiteTextInTable">No</td>
+                                <td id="whiteTextInTable">Si</td>
+                            </tr>
+                            <tr  >
+                                <td>Border Horizontal</td>
+                                <td id="whiteTextInTable">Si</td>
+                                <td id="whiteTextInTable">Si</td>
+                                <td id="whiteTextInTable">Si</td>
+                            </tr>
+                            <tr >
+                                <td>Border Vertical</td>
+                                <td id="whiteTextInTable">Si</td>
+                                <td id="whiteTextInTable">No</td>
+                                <td id="whiteTextInTable">Si</td>
+                            </tr>
+                            <tr>
+                                <td>Respeta Width</td>
+                                <td id="whiteTextInTable">Si</td>
+                                <td id="whiteTextInTable">No</td>
+                                <td id="whiteTextInTable">Si</td>
+                            </tr>
+                            <tr  >
+                                <td>Respeta Height</td>
+                                <td id="whiteTextInTable">Si</td>
+                                <td id="whiteTextInTable">No</td>
+                                <td id="whiteTextInTable">Si</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </section>
+                </section>
+                
+                <section id="FlexboxExampleSection">
+                    <h1>Ejemplo del funcionamiento de flexbox</h1>
+                    <div id="ObjectsContainerFlexExample">
+                        <div id="Obj1" style="background-color: red;">Objeto 1</div>
+                        <div id="Obj2" style="background-color: black;">Objeto 2</div>
+                        <div id="Obj3" style="background-color: orange;">Objeto 3</div>
+                        <div id="Obj4" style="background-color: rgb(240, 162, 16);">Objeto 4</div>
+                        <div id="Obj5" style="background-color: rgb(225, 0, 255);">Objeto 5</div>
+                        <div id="Obj6" style="background-color: rgb(243, 16, 91);">Objeto 6</div>
+                    </div>
+                    <div id="CodeContainer">
+                        <textarea id="flexCssCode"name="textarea" >
+                            
+                        </textarea>
+                    </div>
+
+                </section>
+                
                 <section id="OverlaysSection">
                     <div class="overlay" id="specificityOverlay">
                         <div>
@@ -281,17 +380,145 @@
                             </div>
                         </div>
                     </div>
+                    <div class="overlay" id="modeloDeCajas">
+                        <div>
+                            <div id="buttonContainerOverlay">
+                                <button class="CloseOverlayButton">Close</button>
+                            </div>
+                            <h1>Modelo de Cajas</h1>
+                            <div class="textDiv">
+                               <p>Cada elemento es considerado como una caja y se compone por</p>
+                               <dl>
+                                    <dt>*Contenido</dt>
+                                    <dd>Es el area donde se encuentra el texto, imagen etc, este es afectado por:</dd>
+                                    <dd>width</dd>
+                                    <dd>min-width</dd>
+                                    <dd>max-width</dd>
+                                    <dd>height</dd>
+                                    <dd>min-height</dd>
+                                    <dd>max-height</dd>
+
+                                    <dt>*Relleno</dt>
+                                    <dd>Es el area de relleno del elemento, este es afectado por:</dd>
+                                    <dd>padding</dd>
+                                    <dd>padding-top</dd>
+                                    <dd>padding-right</dd>
+                                    <dd>padding-bottom</dd>
+                                    <dd>padding-left</dd>
+
+                                    <dt>*Borde</dt>
+                                    <dd>Es el borde del elemento, puede tener un grosor y color que estan determinados por:</dd>
+                                    <dd>border</dd>
+                                    <dd>border-width</dd>
+                                    <dd>border-style</dd>
+                                    <dd>border-color</dd>
+
+                                    <dt>*Margen</dt>
+                                    <dd>Es el margen del elemento, es usado para separar al elemento de sus vecinos:</dd>
+                                    <dd>margin</dd>
+                                    <dd>margin-top</dd>
+                                    <dd>margin-right</dd>
+                                    <dd>margin-bottom</dd>
+                                    <dd>margin-left</dd>
+                               </dl>
+                            </div>
+                            <div class="imageContainer">
+                            <img src="./Assets/ModeloDeCajas.PNG" alt="SpecificityExample">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="overlay" id="MarginCollapseOverlay">
+                        <div>
+                            <div id="buttonContainerOverlay">
+                                <button class="CloseOverlayButton">Close</button>
+                            </div>
+                            <h1>Colapsamiento de margenes verticales</h1>
+                            <div class="textDiv">
+                                <p>Los margenes verticales en HTML se solapan hasta que uno choque con el borde o relleno del otro elemento, por tanto la distancia entre estos sera igual a la del margen mas grande</p>
+                            </div>
+                            <div class="imageContainer">
+                            <img src="./Assets/SolapamientoDeMargenes.PNG" alt="SpecificityExample">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="overlay" id="FlexBoxBasicOverlay">
+                        <div>
+                            <div id="buttonContainerOverlay">
+                                <button class="CloseOverlayButton">Close</button>
+                            </div>
+                            <h1>FlexBox</h1>
+                            <div class="textDiv">
+                                <p>La propiedad display flex permite establecer contenedores flexibles los cuales agrupan los componentes a lo largo de un eje principal y las lineas o ejes transversales agrupan las lineas flexibles</p>
+                                </div>
+                            <div class="imageContainer">
+                            <img src="./Assets/FlexboxEjes.PNG" alt="SpecificityExample">
+                            </div>
+                            <br>
+                            <div class="textDiv">
+                                <h2>Tamaños</h2>
+                                <p>Otra caracteristica de flexbox es que su tamaño principal es en base a su ancho si es rows y alto si son columns, de manera similar si el tamaño principal es el alto, el tamaño transversal sera el ancho</p>
+                            </div>
+                            <div class="textDiv">
+                                <h2>Ejes principales</h2>
+                                <p>Es posible escoger el eje principal usando la propiedad flex-direction, las opciones son</p>
+                                <ul>
+                                    <li>rows</li>
+                                    <li>rows-reverse</li>
+                                    <li>columns</li>
+                                    <li>columns-reverse</li>
+                                </ul>
+                            </div>
+                            <div class="imageContainer">
+                                <img src="./Assets/flexDirections.PNG" alt="SpecificityExample">
+                            </div>
+                            <div class="textDiv">
+                                <h2>Colocar elementos en el eje principal</h2>
+                                <p>Se puede establecer como se distribuyen los elementos en el eje principal usando la propiedad justify-content, esta puede recibir:</p>
+                                <ul>
+                                    <li>flex-start</li>
+                                    <li>flex-end</li>
+                                    <li>space-between</li>
+                                    <li>center</li>
+                                    <li>space-around</li>
+                                </ul>
+                            </div>
+                            <div class="textDiv">
+                                <h2>Colocar elementos en el eje transversal</h2>
+                                <p>Se puede establecer como se distribuyen los elementos en el eje transversal usando la propiedad align-items, esta puede recibir:</p>
+                                <ul>
+                                    <li>flex-start</li>
+                                    <li>flex-end</li>
+                                    <li>stretch</li>
+                                    <li>center</li>
+                                </ul>
+                            </div>
+                            <div class="textDiv">
+                                <h2>Flex-wrap</h2>
+                                <p>La propiedad flex-wrap se encarga de definir si el contenedor tiene una o varias lineas flexibles y ademas determina la direccion de estas, esta propiedad recibe</p>
+                                <ul>
+                                    <li>nowrap</li>
+                                    <li>wrap</li>
+                                    <li>wrap-reverse</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </section>
                 
-                </section>
-                <section id="theoricSection">
+                <div id="theoricSection">
                     <h1>Aspectos teoricos</h1>
-                    <button class="TheoricButton" OverlayId="specificityOverlay">Especifidad</button>
-                    <button class="TheoricButton" OverlayId="LineStyleOverlay">Estilos en linea</button>
-                    <button class="TheoricButton" OverlayId="TopicImportantOverlay">!important</button>
-                    <button class="TheoricButton" OverlayId="OrderOverlay">Orden</button>
-                    <button class="TheoricButton" OverlayId="InheritanceOverlay">Herencia</button>
-                </section>
+                    <div>
+                        <button class="TheoricButton" OverlayId="specificityOverlay">Especifidad</button>
+                        <button class="TheoricButton" OverlayId="LineStyleOverlay">Estilos en linea</button>
+                        <button class="TheoricButton" OverlayId="TopicImportantOverlay">!important</button>
+                        <button class="TheoricButton" OverlayId="OrderOverlay">Orden</button>
+                        <button class="TheoricButton" OverlayId="InheritanceOverlay">Herencia</button>
+                        <button class="TheoricButton" OverlayId="modeloDeCajas">Modelo de cajas</button>
+                        <button class="TheoricButton" OverlayId="MarginCollapseOverlay">Colapso de margenes</button>
+                        <button class="TheoricButton" OverlayId="FlexBoxBasicOverlay">Conceptos basicos de flexbox</button>
+
+                    </div>
+                </div>
         </main>
         <footer>
             <h3>Nombre: Christian Rivero Arnez</h3>
