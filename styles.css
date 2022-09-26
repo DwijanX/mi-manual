@@ -18,8 +18,11 @@ body {
     margin:0;
 }
 body::-webkit-scrollbar {
-    display: none;
+    display:block;
   }
+body::-webkit-scrollbar-thumb{
+    background-color: var(--whitecolor) ;
+}
 header{
     display: flex !important;
     flex-direction: row !important;
